@@ -1,0 +1,19 @@
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: var(--space-8);
+  margin-bottom: var(--space-4);
+}
+
+.section-icon {
+  width: 20px;
+  height: 20px;
+  /* El color lo hereda o se pasa por svg */
+}
+
+.section-title {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--text-primary);
+}

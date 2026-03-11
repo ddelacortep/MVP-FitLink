@@ -1,0 +1,140 @@
+.workouts-view {
+  padding: var(--space-6) var(--space-4) calc(var(--nav-height) + var(--space-6));
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.workouts-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-6);
+}
+
+.workouts-title {
+  font-size: var(--font-size-3xl);
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.btn-start-global {
+  width: 100%;
+  padding: 16px;
+  background-color: var(--accent-teal);
+  color: var(--bg-app);
+  border-radius: var(--radius-lg);
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  margin-bottom: var(--space-8);
+  transition: opacity 0.2s, transform 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+}
+
+.btn-start-global:hover {
+  opacity: 0.9;
+}
+
+.btn-start-global:active {
+  transform: scale(0.98);
+}
+
+.section-title {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-4);
+}
+
+.actions-row {
+  display: flex;
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+}
+
+.btn-new-routine {
+  flex: 1;
+  padding: 12px;
+  background-color: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-new-routine:hover:not(.is-disabled) {
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.btn-new-routine.is-disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.btn-search-routine {
+  flex: 1;
+  padding: 12px;
+  background-color: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-search-routine:hover {
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.routines-details {
+  background-color: transparent;
+  margin-bottom: var(--space-4);
+}
+
+.routines-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4) 0;
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--text-primary);
+  cursor: pointer;
+  list-style: none; /* remove native arrow in most browsers */
+  border-bottom: 1px solid var(--border-card);
+  margin-bottom: var(--space-4);
+}
+
+/* Custom animated chevron for details open/close state */
+.summary-chevron {
+  transition: transform 0.3s;
+  color: var(--text-secondary);
+}
+
+details[open] .summary-chevron {
+  transform: rotate(180deg);
+}
+
+/* Hide fallback native arrow in WebKit */
+.routines-summary::-webkit-details-marker {
+  display: none;
+}

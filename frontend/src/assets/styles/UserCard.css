@@ -1,0 +1,79 @@
+.user-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  margin-bottom: var(--space-4);
+  transition: border-color 0.2s ease;
+}
+
+.user-card-info {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.user-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-full);
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.user-name {
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.user-handle {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+}
+
+.user-stats {
+  display: flex;
+  gap: var(--space-3);
+  margin-top: 4px;
+}
+
+.stat-item {
+  font-size: var(--font-size-xs);
+  color: var(--text-secondary);
+}
+
+.stat-item strong {
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+.btn-follow {
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btn-follow.is-following {
+  background-color: transparent;
+  border: 1px solid var(--border-card);
+  color: var(--text-primary);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.btn-follow:not(.is-following) {
+  background-color: var(--accent-teal);
+  color: var(--bg-app);
+  border: 1px solid var(--accent-teal);
+}

@@ -1,0 +1,32 @@
+.search-view {
+  padding: var(--space-6) var(--space-4) calc(var(--nav-height) + var(--space-6));
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.search-header {
+  margin-bottom: var(--space-6);
+}
+
+.search-title {
+  font-size: var(--font-size-3xl);
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.suggested-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-title {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-4);
+}
+
+.users-list {
+  display: flex;
+  flex-direction: column;
+}

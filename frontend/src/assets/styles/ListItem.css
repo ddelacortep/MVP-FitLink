@@ -1,0 +1,75 @@
+.list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  margin-bottom: var(--space-3);
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.list-item:hover {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.item-left {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+/* Variante Friend */
+.item-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  object-fit: cover;
+}
+
+.item-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.item-title {
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.item-subtitle {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+}
+
+.item-right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+/* Variantes visuales para la sección derecha */
+.item-highlight {
+  font-size: var(--font-size-sm);
+  color: var(--accent-orange);
+  font-weight: 500;
+}
+
+.item-badge {
+  background-color: var(--bg-card-hover);
+  padding: 6px 12px;
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.chevron-icon {
+  width: 16px;
+  height: 16px;
+  color: var(--text-secondary);
+}

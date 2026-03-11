@@ -1,0 +1,99 @@
+.routine-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4) var(--space-4) var(--space-2) var(--space-4);
+  margin-bottom: var(--space-4);
+  display: flex;
+  flex-direction: column;
+}
+
+.routine-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--space-3);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.routine-title-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.routine-title {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.routine-duration {
+  font-size: var(--font-size-sm);
+  color: var(--accent-orange);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.exercise-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.exercise-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+}
+
+.exercise-name {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.exercise-sets {
+  font-size: var(--font-size-xs);
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+}
+
+.more-exercises {
+  font-size: var(--font-size-sm);
+  color: var(--text-tertiary);
+  font-style: italic;
+  margin-top: 4px;
+}
+
+.btn-start-routine {
+  width: 100%;
+  padding: 12px;
+  background-color: transparent;
+  color: var(--accent-teal);
+  border: 1px solid var(--accent-teal);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-start-routine:hover {
+  background-color: var(--accent-teal-transparent); /* Assuming we don't have this token exactly, standard transparent hex hover is fine */
+  background-color: rgba(46, 204, 113, 0.1); 
+}
+
+.btn-start-routine:active {
+  transform: scale(0.98);
+}

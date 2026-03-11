@@ -1,0 +1,57 @@
+.social-view {
+  padding: var(--space-6) var(--space-4) calc(var(--nav-height) + var(--space-6));
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.social-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-6);
+}
+
+.social-title {
+  font-size: var(--font-size-3xl);
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.btn-create {
+  background-color: var(--accent-teal);
+  color: var(--bg-app);
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: transform 0.2s ease;
+}
+
+.btn-create:active {
+  transform: scale(0.95);
+}
+
+.search-container {
+  margin-bottom: var(--space-6);
+}
+
+.groups-list {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Transiciones para la lista (opcional pero le da toque premium) */
+.list-move,
+.list-enter-active,
+.list-leave-active {
+  transition: all 0.3s ease;
+}
+
+.list-enter-from,
+.list-leave-to {
+  opacity: 0;
+  transform: translateY(-15px);
+}

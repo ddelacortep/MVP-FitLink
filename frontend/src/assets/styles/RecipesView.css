@@ -1,0 +1,98 @@
+.recipes-view {
+  padding: var(--space-6) var(--space-4) calc(var(--nav-height) + var(--space-6));
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.recipes-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-6);
+}
+
+.recipes-title {
+  font-size: var(--font-size-3xl);
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.btn-create {
+  background-color: var(--accent-teal);
+  color: var(--bg-app);
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: transform 0.2s ease;
+}
+
+.btn-create:active {
+  transform: scale(0.95);
+}
+
+.search-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+/* Reducimos el margen del SearchInput existente ya que ahora vive en una fila */
+.search-row :deep(.search-input-wrapper) {
+  margin-bottom: 0;
+  flex: 1;
+}
+
+.btn-filter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-lg);
+  color: var(--text-secondary);
+  flex-shrink: 0;
+  transition: all 0.2s;
+}
+
+.btn-filter:hover {
+  border-color: rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+}
+
+.filters-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.filter-label {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+}
+
+.filter-icon {
+  width: 14px;
+  height: 14px;
+}
+
+.recipes-list {
+  display: flex;
+  flex-direction: column;
+}

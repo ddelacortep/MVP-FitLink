@@ -1,0 +1,72 @@
+.profile-view {
+  padding: var(--space-6) var(--space-4) calc(var(--nav-height) + var(--space-6));
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.profile-header-global {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-6);
+}
+
+.profile-title {
+  font-size: var(--font-size-3xl);
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.btn-settings {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  background-color: transparent;
+  border-radius: var(--radius-full);
+  transition: background-color 0.2s;
+}
+
+.btn-settings:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.chart-wrapper {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  margin-bottom: var(--space-8); /* un poco más de margen inferior después de los gráficos para respirar */
+}
+
+/* Modificación local del header del gráfico que difiere un poco del global */
+.chart-title-local {
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-4);
+}
+
+.list-header-link {
+  font-size: var(--font-size-sm);
+  color: var(--accent-teal);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.list-header-link:hover {
+  text-decoration: underline;
+}
+
+.section-spacing {
+  margin-bottom: var(--space-8);
+}

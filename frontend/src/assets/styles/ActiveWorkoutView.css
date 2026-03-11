@@ -1,0 +1,100 @@
+.active-workout-view {
+  padding: var(--space-4) var(--space-4) var(--space-8);
+  max-width: 600px;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Fijo Inmersivo */
+.workout-header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-6);
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  position: sticky;
+  top: 0;
+  background-color: var(--bg-app);
+  z-index: 10;
+}
+
+.btn-cancel {
+  color: var(--text-primary);
+  background: transparent;
+  border: none;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.workout-title-main {
+  font-size: var(--font-size-lg);
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.workout-timer-placeholder {
+  font-size: var(--font-size-sm);
+  color: var(--accent-orange);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Espacio contenedor flexible */
+.workout-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+/* Botones genéricos de la vista activa */
+.btn-add-exercise {
+  width: 100%;
+  padding: 16px;
+  background-color: rgba(46, 204, 113, 0.1);
+  color: var(--accent-teal);
+  border: 1px dashed var(--accent-teal);
+  border-radius: var(--radius-lg);
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: var(--space-2);
+  margin-bottom: var(--space-8);
+}
+
+.btn-add-exercise:hover {
+  background-color: rgba(46, 204, 113, 0.2);
+}
+
+.btn-finish-workout {
+  width: 100%;
+  padding: 18px;
+  background-color: var(--accent-teal);
+  color: var(--bg-app);
+  border: none;
+  border-radius: var(--radius-lg);
+  font-size: var(--font-size-lg);
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(46, 204, 113, 0.3);
+  margin-top: auto; /* Empuja el botón al fondo si hay poco contenido */
+}
+
+.btn-finish-workout:active {
+  transform: scale(0.98);
+}

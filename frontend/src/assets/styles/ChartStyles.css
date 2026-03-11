@@ -1,0 +1,65 @@
+.chart-container {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4) var(--space-5);
+  margin-bottom: var(--space-6);
+}
+
+.chart-header {
+  margin-bottom: var(--space-6);
+}
+
+.chart-title {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.chart-wrapper {
+  position: relative;
+  height: 160px; /* Base height for the chart */
+  width: 100%;
+}
+
+.chart-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+/* Y Axis */
+.y-axis {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 24px; /* Space for x-axis labels */
+  z-index: 10;
+}
+
+.y-axis-label {
+  font-size: var(--font-size-xs);
+  color: var(--text-muted);
+  font-weight: 500;
+  line-height: 1;
+}
+
+/* X Axis */
+.x-axis {
+  position: absolute;
+  bottom: 0px;
+  left: 32px; /* Offset for Y axis */
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.x-axis-label {
+  font-size: var(--font-size-xs);
+  color: var(--text-muted);
+  font-weight: 500;
+}

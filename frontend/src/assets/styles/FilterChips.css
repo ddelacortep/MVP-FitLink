@@ -1,0 +1,39 @@
+.filter-chips-container {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  overflow-x: auto;
+  padding-bottom: var(--space-2); /* scrollbar spacing */
+  -ms-overflow-style: none; /* IE/Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.filter-chips-container::-webkit-scrollbar {
+  display: none; /* Safari/Chrome */
+}
+
+.chip-btn {
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  white-space: nowrap;
+  border: 1px solid var(--border-card);
+  color: var(--text-secondary);
+  background-color: transparent;
+  transition: all 0.2s ease;
+}
+
+/* Variant teal */
+.chip-btn.teal.is-active {
+  background-color: var(--accent-teal);
+  color: var(--bg-app);
+  border-color: var(--accent-teal);
+}
+
+/* Variant orange */
+.chip-btn.orange.is-active {
+  background-color: var(--accent-orange);
+  color: var(--bg-app);
+  border-color: var(--accent-orange);
+}

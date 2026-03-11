@@ -1,0 +1,117 @@
+.profile-header-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  margin-bottom: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.profile-info-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.avatar-container {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+}
+
+.avatar-image {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-full);
+  object-fit: cover;
+  border: 2px solid var(--accent-teal);
+  padding: 2px;
+}
+
+.edit-badge {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 24px;
+  height: 24px;
+  background-color: var(--accent-teal);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--bg-card);
+  color: var(--bg-app);
+  cursor: pointer;
+}
+
+.edit-icon {
+  width: 12px;
+  height: 12px;
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.user-name {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.user-handle {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+}
+
+.user-tags {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+}
+
+.user-tag {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* Stats Row */
+.profile-stats-row {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--border-card);
+  padding-top: var(--space-4);
+}
+
+.profile-stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  flex: 1;
+}
+
+.profile-stat-value {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--accent-teal); /* Basado en el diseño (234 entrenos verde) y los otros blancos, aplicamos una clase diferencial */
+}
+
+.profile-stat-value.white {
+  color: var(--text-primary);
+}
+
+.profile-stat-label {
+  font-size: var(--font-size-xs);
+  color: var(--text-secondary);
+}

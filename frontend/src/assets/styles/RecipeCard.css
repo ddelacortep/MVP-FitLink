@@ -1,0 +1,101 @@
+.recipe-card {
+  position: relative;
+  width: 100%;
+  height: 280px; 
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: var(--space-4);
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-card);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.recipe-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* Gradient bottom-up for text readability (3 quarters of the card) */
+.recipe-gradient {
+  position: absolute;
+  top: 25%;
+  left: 0;
+  width: 100%;
+  height: 75%;
+  background: linear-gradient(to top, rgba(13, 13, 13, 1) 10%, rgba(13, 13, 13, 0.8) 50%, rgba(13, 13, 13, 0) 100%);
+  z-index: 2;
+}
+
+.recipe-content {
+  position: relative;
+  z-index: 3;
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  /* Make sure background gradient handles the bg color, content container itself is transparent */
+}
+
+/* Header Info */
+.recipe-header {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.recipe-title {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.recipe-author {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+}
+
+/* Stats Row */
+.recipe-stats {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.stat-icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* Tags Row */
+.recipe-tags {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.recipe-tag {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-card);
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  color: var(--text-primary);
+  font-weight: 500;
+}

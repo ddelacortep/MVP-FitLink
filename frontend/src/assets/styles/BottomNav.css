@@ -1,0 +1,58 @@
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: var(--nav-height);
+  background-color: var(--bg-card);
+  border-top: 1px solid var(--border-card);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 var(--space-2);
+  z-index: 50;
+  /* Espacio seguro para iOS/dispositivos sin botones físicos de home */
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  width: 64px;
+  height: 56px;
+  border-radius: var(--radius-lg);
+  color: var(--text-secondary);
+  transition: all 0.2s ease;
+}
+
+.nav-item.is-active {
+  color: var(--text-primary);
+}
+
+.nav-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+
+.nav-item.is-active .nav-icon-wrapper {
+  background-color: var(--accent-teal);
+  border-radius: var(--radius-lg);
+  width: 48px;
+  height: 32px;
+  color: var(--bg-app);
+}
+
+.nav-label {
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+}
+
+.nav-item.is-active .nav-label {
+  color: var(--accent-teal);
+}
