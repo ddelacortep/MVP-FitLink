@@ -1,4 +1,4 @@
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 
 export function useProfileData() {
   const user = ref({
@@ -10,6 +10,17 @@ export function useProfileData() {
       workouts: 234,
       followers: '1.2k',
       following: 89
+    }
+  })
+
+  // Update name from URL if present
+  onMounted(() => {
+    if (typeof window !== 'undefined') {
+      const urlParams = new URLSearchParams(window.location.search);
+      const nameParam = urlParams.get('name');
+      if (nameParam) {
+        user.value.name = nameParam;
+      }
     }
   })
 

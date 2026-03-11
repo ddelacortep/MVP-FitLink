@@ -1,6 +1,8 @@
 <script setup>
+import { computed, onMounted, ref } from 'vue'
 import { useStatData } from '../composables/useStatData'
 import { useChartData } from '../composables/useChartData'
+import { useProfileData } from '../composables/useProfileData'
 
 import SectionHeader from '../components/SectionHeader.vue'
 import StatCard from '../components/StatCard.vue'
@@ -10,6 +12,7 @@ import BottomNav from '../components/BottomNav.vue'
 
 const { stats } = useStatData()
 const { weeklyActivity, monthlyProgress } = useChartData()
+const { user } = useProfileData()
 
 // Icon paths for SectionHeaders
 const iconTrophy = 'M5 3v4M19 3v4M5 7h14a2 2 0 01-2 2H7a2 2 0 01-2-2z M8 9v2a4 4 0 108 0V9 M12 21v-6 M8 21h8'
@@ -25,6 +28,11 @@ const getIconPath = (type) => {
   }
   return map[type] || ''
 }
+
+const displayFirstName = computed(() => {
+  const fullName = user.value.name || 'Carlos Mendoza';
+  return fullName.split(' ')[0];
+})
 </script>
 
 <template>
@@ -34,7 +42,7 @@ const getIconPath = (type) => {
       <div>
         <div class="greeting-sup">Hola de nuevo,</div>
         <h1 class="greeting-title">
-          Carlos <span>💪</span>
+          {{ displayFirstName }} <span>💪</span>
         </h1>
       </div>
       <button class="btn-add" aria-label="Añadir">
