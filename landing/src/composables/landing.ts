@@ -2,7 +2,7 @@ import { ref, onMounted, onUnmounted } from 'vue';
 
 export function useLanding() {
     // Estado general
-    const appUrl = ref("https://fitness-friend-social.lovable.app");
+    const appUrl = ref(import.meta.env.VITE_APP_URL || 'http://localhost:5173');
     const isMenuOpen = ref(false);
     const isScrolled = ref(false);
     const currentYear = ref(new Date().getFullYear());
@@ -50,7 +50,7 @@ export function useLanding() {
                     setTimeout(() => {
                         // @ts-ignore
                         window.Tally.closePopup('VLlBpv');
-                        window.open(`http://localhost:5173/${nameParam}`, '_blank');
+                        window.open(`${appUrl.value}/${nameParam}`, '_blank');
                     }, 500);
                 }
             });

@@ -1,0 +1,22 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - (cd landing && npm ci)
+        - (cd frontend && npm ci)
+    build:
+      commands:
+        - (cd landing && npm run build)
+        - (cd frontend && npm run build)
+        - mkdir -p dist-combined/app
+        - cp -r landing/dist/. dist-combined/
+        - cp -r frontend/dist/. dist-combined/app/
+  artifacts:
+    baseDirectory: dist-combined
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - landing/node_modules/**/*
+      - frontend/node_modules/**/*
