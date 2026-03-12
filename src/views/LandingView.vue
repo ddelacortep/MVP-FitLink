@@ -14,7 +14,7 @@
                                     d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                             </svg>
                         </div>
-                        <span class="font-bold text-xl tracking-tight text-white">FitnessFriend</span>
+                        <span class="font-bold text-xl tracking-tight text-white">FitLink</span>
                     </div>
 
                     <!-- Desktop Nav -->
